@@ -16,8 +16,10 @@ const screens = {
   },
   SINGLEEVENT: {
     screen: SingleEventScreen,
-    navigationOptions: {
-      title: "Single Event",
+    navigationOptions: ({ navigation }) => {
+      return {
+        headerTitle: () => <HeaderScreen navigation={navigation} />,
+      };
     },
   },
   MAPS: {

@@ -28,7 +28,6 @@ export default StyleSheet.create({
     height: 40,
     width: 130,
   },
-
   eventFooter: {
     width: 300,
     alignContent: "center",

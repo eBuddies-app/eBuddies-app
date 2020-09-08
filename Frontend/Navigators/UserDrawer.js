@@ -9,9 +9,14 @@ import MyCalendarScreen from "./MyCalendarStack";
 const UserDrawerNavigator = createDrawerNavigator({
   EVENTS: {
     screen: AllEventsScreen,
-    navigationOptions: {
-      title: "All Events",
+    navigationOptions: ({ navigation }) => {
+      return {
+        headerTitle: () => <HeaderScreen navigation={navigation} />,
+      };
     },
+    // navigationOptions: {
+    //   title: "All Events",
+    // },
   },
   RECOMMENDEDEVENTS: {
     screen: RecommendedEventsScreen,
